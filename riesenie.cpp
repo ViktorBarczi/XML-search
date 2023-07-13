@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstring>
-#include "rapidxml_utils.hpp"  // I used rapidxml library
+#include "rapidxml_utils.hpp"  // I used rapidxml library. With the help of this libary I was able to make a linked list out of the XML files, where every node is a div.
      
 
 using namespace std;
@@ -37,12 +37,13 @@ void find_phone_number(rapidxml::xml_node<> *node,char *str) {
     }
     return;
 }
-
+// In this case I am trying to find every phone number int a XML file
+// In this case it is placed at nodes called "aixm:voice"
 int main()
 {
     char file[1000];
 
-    char str[] = "aixm:voice";                        //the node that I'm looking for
+    char str[] = "aixm:voice";                        //the node that I'm looking for, by name
 
     cout << "Type in the location of the XML file, for example: C:/Users/vbarc/OneDrive/Dokumenty/AirportHeliport.xml"<< endl;
 
